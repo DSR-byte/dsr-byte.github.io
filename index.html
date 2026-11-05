@@ -1,138 +1,132 @@
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Rock Portfolio</title>
-  <link rel="stylesheet" href="DSR_Portfolio_Style_About.css">
-  <script src="slide_mover.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11283d">
+  <meta name="description" content="David Rock is an electrical engineering student at Cal Poly focused on robotic manipulation, controls, embedded sensing, and experimental analysis.">
+  <meta property="og:title" content="David Rock | Robotics & Controls">
+  <meta property="og:description" content="Selected work in robotic manipulation, embedded sensing, industrial control, and nonlinear dynamics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dsr-byte.github.io/">
+  <title>David Rock | Robotics & Controls</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-
-<header>
-  <h1>My Portfolio</h1>
-  <p>By: David Rock</p>
-  <nav>
-    <div class="nav-left">
-      <a href="https://dsr-byte.github.io">About</a>
-      <a href="#resume">Resume</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Lab_Reports/Lab_Reports.html">Lab Reports</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Projects/projects.html">Projects</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Hobbies/Hobbies.html">Hobbies</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="nav-right">
-      <input type="text" placeholder="Search..." class="search-bar">
-      <a href="#menu" class="menu-tag">MENU</a>
-    </div>
-  </nav>
-</header>
-
 <body>
-  <div class="front_page_slider">
-    <div class="slides">
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <img src="Turbine_3D_Print.jpeg" alt="Slide 1">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="David Rock, back to top">DR<span>.</span><small>David Rock</small></a>
+      <div class="nav-links"><a href="#work">Work</a><a href="#course">Course</a><a href="#expertise">Expertise</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <a class="nav-resume" href="assets/David_Rock_Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Electrical engineer in training · Cal Poly SLO</p>
+          <h1 id="hero-title">Robotics &amp; controls, <em>built and tested.</em></h1>
+          <p class="hero-lede">I’m David Rock. I work across robot motion, sensing, and control systems—from mathematical models to code and measurements on real hardware.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a>
+            <a class="button button-text" href="assets/David_Rock_Resume.pdf" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta"><span>Robot manipulation</span><span>Embedded sensing</span><span>Control systems</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-topline"><span>FIELD NOTES / 001</span><span>EE 4471 · ROBOTIC MANIPULATION</span></div>
+          <img src="assets/robot-calibration.png" alt="OpenManipulator-X arm, Intel RealSense camera, and AprilTag calibration board on a lab bench" width="1536" height="1024" fetchpriority="high">
+          <div class="visual-caption"><span>Vision-based manipulation</span><span>Hardware + software validation</span></div>
+          <div class="metric metric-one"><strong>59 <small>Hz</small></strong><span>measured control loop</span></div>
+          <div class="metric metric-two"><strong>2.0 <small>mm</small></strong><span>mean camera registration error</span></div>
+        </div>
       </div>
+      <div class="hero-index shell"><span>01 / INTRODUCTION</span><span>Scroll to explore ↓</span></div>
+    </section>
 
-      <!-- Slide 2 -->
-      <div class="slide">
-        <img src="Basis_Board.jpeg" alt="Slide 2">
+    <section class="section section-work" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="kicker">01 / SELECTED WORK</p><h2 id="work-title">Systems that move,<br>measure, and respond.</h2></div>
+          <p class="section-intro">Course, team, and independent projects showing how I approach real engineering problems.</p>
+        </div>
+        <article class="featured-project" aria-labelledby="manipulation-title">
+          <div class="featured-photo"><img src="assets/robot-calibration.png" alt="Vision calibration setup with OpenManipulator-X, RealSense camera, and AprilTag board" width="1536" height="1024" loading="lazy"></div>
+          <div class="featured-content">
+            <p class="project-number">FEATURED PROJECT / 01</p>
+            <h3 id="manipulation-title">Vision-based robotic manipulation</h3>
+            <p class="project-deck">Motion planning and camera calibration for a four-degree-of-freedom OpenManipulator-X arm.</p>
+            <ul class="detail-list">
+              <li>Planned task-space poses, checked inverse-kinematics reachability, and tested pick-and-place motion on hardware.</li>
+              <li>Compared cubic joint-space and quintic task-space trajectories using measured path and speed data.</li>
+              <li>Implemented Jacobian pseudoinverse waypoint tracking with a measured 59 Hz loop and 48.2 mm/s realized speed for a 50 mm/s command.</li>
+              <li>Calibrated a RealSense D435 to the robot frame using AprilTags and coordinate transforms; measured 2.0 mm mean registration error.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>Kinematics</span><span>Trajectory planning</span><span>Computer vision</span></div>
+          </div>
+        </article>
+        <div class="project-grid">
+          <article class="project-card rover-card" aria-labelledby="rover-title">
+            <div class="card-art rover-art" aria-hidden="true"><div class="sensor-field"><span class="beam beam-a"></span><span class="beam beam-b"></span><span class="beam beam-c"></span><span class="rover-body"><i></i><i></i></span><span class="obstacle"></span></div><span class="art-label">STM32 / ToF / FreeRTOS</span></div>
+            <div class="card-body"><p class="project-number">02 / EMBEDDED SYSTEMS</p><h3 id="rover-title">Rover proximity sensing</h3><p>For Cal Poly’s Poly1Rover EE team, brought a time-of-flight distance sensor onto STM32 hardware, ported its driver to C/HAL, and ran sensing in a FreeRTOS task. Tested a prototype response to objects within 50 cm.</p><div class="tags"><span>STM32</span><span>C</span><span>FreeRTOS</span><span>Sensor integration</span></div></div>
+          </article>
+          <article class="project-card plc-card" aria-labelledby="plc-title">
+            <div class="card-art plc-art" aria-hidden="true"><div class="plc-line"><span class="plc-node">TEMP<br>SENSOR</span><span class="plc-track"></span><span class="plc-node controller">PLC<br>LOGIC</span><span class="plc-track"></span><span class="fan-row"><span>F1</span><span>F2</span><span>F3</span></span></div><span class="art-label">SENSE → DECIDE → ACT</span></div>
+            <div class="card-body"><p class="project-number">03 / INDUSTRIAL CONTROLS</p><h3 id="plc-title">Three-fan cooling control</h3><p>Designed a temperature-controlled fan system on a Schneider Electric Modicon PLC with automated sensing and hysteresis-based logic in Ladder Diagram and Function Block Diagram.</p><div class="tags"><span>PLC</span><span>EcoStruxure</span><span>Hysteresis</span></div></div>
+          </article>
+          <article class="project-card dynamics-card" aria-labelledby="dynamics-title">
+            <div class="card-art dynamics-art" aria-hidden="true"><svg viewBox="0 0 500 220" preserveAspectRatio="none"><path d="M0 176 H500 M0 132 H500 M0 88 H500 M0 44 H500" class="grid-line"/><path d="M28 184 L70 156 L110 165 L151 104 L192 127 L232 51 L274 85 L313 37 L354 114 L394 75 L436 157 L475 124" class="plot-line"/><circle cx="232" cy="51" r="5"/><circle cx="313" cy="37" r="5"/></svg><span class="art-label">TIME SERIES / RETURN MAPS</span></div>
+            <div class="card-body"><p class="project-number">04 / EXPERIMENTAL ANALYSIS</p><h3 id="dynamics-title">Nonlinear dynamics lab</h3><p>Analyzed dripping-faucet photogate measurements with return maps and interval histograms to distinguish periodic, alternating, and irregular behavior, while documenting measurement limits.</p><div class="tags"><span>Python</span><span>Data analysis</span><span>Dynamics</span></div><a class="inline-link" href="assets/Dripping_Faucet_Report.pdf" target="_blank" rel="noopener">Read the lab report <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card stage-card" aria-labelledby="stage-title">
+            <div class="card-art photo-art"><img src="Hamiltoc stage.jpg" alt="Student-built rotating stage model inspired by the musical Hamilton" loading="lazy"><span class="art-label">MECHATRONICS / PROTOTYPE</span></div>
+            <div class="card-body"><p class="project-number">05 / MOTION CONTROL</p><h3 id="stage-title">Rotating stage prototype</h3><p>Built a rotating stage model with an Arduino control interface, custom PCB, IR input, and 3D-printed components. Presented the working prototype at a student showcase.</p><div class="tags"><span>Arduino</span><span>PCB design</span><span>Mechanical prototyping</span></div></div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <!-- Slide 3 -->
-      <div class="slide">
-        <img src="CPE_Elevator_1.png" alt="Slide 3">
+    <section class="course-section" id="course" aria-labelledby="course-title">
+      <div class="shell course-layout">
+        <div>
+          <p class="kicker">02 / CURRENT COURSEWORK</p>
+          <p class="course-code">EE 4470 · 2026</p>
+          <h2 id="course-title">Vision-Based Robotic Manipulation</h2>
+          <p class="course-lede">This course connects robot geometry to real motion: rigid-body and homogeneous transformations, Denavit–Hartenberg modeling, forward and inverse kinematics, and vision-guided manipulation.</p>
+          <a class="inline-link" href="#manipulation-title">See the related robot project <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="course-diagram" aria-label="Course learning path from coordinate frames to robot motion and visual sensing">
+          <div><span>01</span><strong>Model</strong><small>Coordinate frames &amp; transforms</small></div>
+          <div><span>02</span><strong>Solve</strong><small>Forward &amp; inverse kinematics</small></div>
+          <div><span>03</span><strong>Move</strong><small>Trajectories on hardware</small></div>
+          <div><span>04</span><strong>Observe</strong><small>Vision &amp; camera calibration</small></div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="frontpage_statment_box">
-    <div class="frontpage_ST_BX_content">
-  Welcome! I'm glad you're here. This site has everything you need to know about me—from my background to my projects.<br><br><br>
-  I designed and built this website myself to share my work, ideas, and passions in one place. Take a look around!
-    </div>
-  </div>
-  
-  <div class="front_page_slider">
-    <div class="slides">
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <img src="Why_Hire_Me.png" alt="Slide 1">
+    <section class="section expertise-section" id="expertise" aria-labelledby="expertise-title">
+      <div class="shell expertise-layout">
+        <div><p class="kicker">03 / TOOLKIT</p><h2 id="expertise-title">Across the full<br>control loop.</h2><p class="expertise-intro">My work connects modeling, implementation, measurement, and iteration.</p></div>
+        <div class="expertise-list">
+          <div class="expertise-item"><span>01</span><div><h3>Controls &amp; motion</h3><p>PID tuning, kinematics, Jacobians, coordinate transforms, trajectory planning, and transient-response analysis.</p></div></div>
+          <div class="expertise-item"><span>02</span><div><h3>Software &amp; simulation</h3><p>Python, MATLAB, Simulink, C, SystemVerilog, and Vivado.</p></div></div>
+          <div class="expertise-item"><span>03</span><div><h3>Hardware &amp; sensing</h3><p>OpenManipulator-X, DYNAMIXEL actuators, Intel RealSense D435, AprilTags, STM32, PLCs, and electronic test equipment.</p></div></div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="Fp_why_me">
-    <input type="radio" name="tab" id="tab1" checked>
-    <input type="radio" name="tab" id="tab2">
-    <input type="radio" name="tab" id="tab3">
-
-    <div class="tab-bar">
-      <label for="tab1">Skills</label>
-      <label for="tab2">Experience</label>
-      <label for="tab3">Philosophy</label>
-    </div>
-
-    <div class="content">
-      <div id="content1" class="tab-content">
-        Cal Poly’s “Learn by Doing” approach gave me hands-on experience with tools like oscilloscopes, function generators, and digital multimeters.
-        <br><br>
-        I'm proficient in MATLAB, LTSpice, Fusion 360, Eagle, and other industry tools, which makes me comfortable taking designs from concept to prototype.
-        <br><br>
-        I troubleshoot effectively, optimize for function and form, and bring strong problem-solving, teamwork, and a drive to keep learning.
+    </section>
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="shell about-layout">
+        <div><p class="kicker">04 / ABOUT</p><h2 id="about-title">Curious about the physics.<br>Committed to the test.</h2></div>
+        <div class="about-copy"><p>I’m a B.S. Electrical Engineering student at California Polytechnic State University, San Luis Obispo, graduating in 2027. I’m pursuing robotics and controls work where a model has to hold up against sensors, actuators, timing, and imperfect data.</p><p>Beyond coursework, I’ve developed and tested sensor hardware at Nextstera Tech and fabricated industrial sensor panels at Real Tech Controls. I enjoy the practical details that turn a concept into a reliable system.</p><div class="about-links"><a class="inline-link" href="assets/David_Rock_Resume.pdf" target="_blank" rel="noopener">Download résumé <span aria-hidden="true">↗</span></a><a class="inline-link" href="https://github.com/DSR-byte" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a></div></div>
       </div>
-      <div id="content2" class="tab-content">
-        I have over 6 months of industry experience in the world of startups and over two years of experience with common lab equipment. 
-        I also have 5 months of experience with high-power equipment such as high-power induction motors and 3-phase power electronics like 3-phase inductors, etc.
-        <br><br>
-        Additionally, I have worked on projects that required designing and testing power systems, troubleshooting complex circuits, and collaborating with cross-functional teams to meet project deadlines. 
-        My hands-on experience has given me a strong foundation in electrical engineering principles and practical applications.
-      </div>
-      <div id="content3" class="tab-content">
-        My philosophy aligns with the core of engineering: applying science and math to solve real-world problems within constraints. I take on challenges directly and focus on delivering practical, effective solutions.
-        <br><br>
-        In team environments, I listen actively and contribute insight with clarity and purpose.
-        <br><br>
-        To me, the only constant in measuring success is knowing you gave it your all. That is the standard I hold myself to, no matter the outcome.
-      </div>
-    </div>
-
-  <div class="front_page_slider_squish">
-    <div class="slides">
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <img src="Banana_Leads.png" alt="Slide 1">
-      </div>
-    </div>
-  </div>
-
-  <section id="resume">
-    <div class="pdf-card">
-      <h3>Resume</h3>
-      <iframe src="https://drive.google.com/file/d/1C5WjbvZJYhnv0d5Wi2jVksfgz1YGUQ4M/preview" width="100%" height="1300px" style="border: none;"></iframe>
-    </div>
-  </section>
-
-  
-  <section id="contact">
-    <div class="contact-box">
-      <h2>Contact</h2>
-      <p>Feel free to reach out — I’d love to connect!</p>
-      <p><strong>Email:</strong> <a href="mailto:drock@calpoly.edu">drock@calpoly.edu</a></p>
-      <p><strong>Phone:</strong> <a href="tel:8586493516">(858) 649-3516</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-nav">
-      <a href="https://dsr-byte.github.io">About</a>
-      <a href="#resume">Resume</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Lab_Reports/Lab_Reports.html">Lab Reports</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Projects/projects.html">Projects</a>
-      <a href="https://dsr-byte.github.io/Website_Pages/Pages_Hobbies/Hobbies.html">Hobbies</a>
-    </div>
-    <p>&copy; 2025 David Rock. This website was designed and developed as part of my professional portfolio.</p>
-  </footer>
-
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-layout"><div><p class="kicker">05 / CONTACT</p><h2 id="contact-title">Let’s build something<br>that works.</h2><p>I’m interested in robotics, controls, and embedded systems opportunities.</p></div><a class="contact-link" href="mailto:david.rock613@gmail.com">david.rock613@gmail.com <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-layout"><span>© 2026 David Rock</span><span>Electrical engineering · San Luis Obispo, CA</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
+</html>
